@@ -3,7 +3,7 @@ kind: PersistentVolumeClaim
 metadata:
   annotations:
     cdi.kubevirt.io/storage.contentType: kubevirt
-    cdi.kubevirt.io/storage.import.endpoint: docker://quay.io/alitke/tinycore
+    cdi.kubevirt.io/storage.import.endpoint: docker://quay.io/alitke/cirros
     cdi.kubevirt.io/storage.import.source: registry
   labels:
     appname: vm-annotated-pvc-odr-metro
