@@ -3,7 +3,7 @@ kind: VirtualMachine
 metadata:
   annotations:
   labels:
-    appname: vm-annotated-pvc-odr-metro
+    appname: vm-dvtemplate-odr-metro
   name: sample-vm
 spec:
   running: false
@@ -14,7 +14,6 @@ spec:
         vm.kubevirt.io/os: fedora
         vm.kubevirt.io/workload: server
       labels:
-        #kubevirt.io/domain: fedora-gsl7p1akfw01hm1e
         kubevirt.io/size: small
     spec:
       domain:
@@ -30,7 +29,7 @@ spec:
           - name: cloudinit
             disk: {}
           interfaces:
-          - macAddress: 02:69:35:00:00:00
+          - macAddress: 02:69:36:00:00:00
             masquerade: {}
             model: virtio
             name: default
@@ -55,3 +54,15 @@ spec:
       - name: cloudinit
         cloudInitNoCloud:
           userData: "#cloud-config"
+  dataVolumeTemplates:
+  - metadata:
+      name: sample-vm-pvc
+    spec:
+      storage:
+        storageClassName: ocs-external-storagecluster-ceph-rbd
+        resources:
+          requests:
+            storage: 2Gi
+      source:
+        registry:
+          url: "docker://quay.io/alitke/cirros:latest"
