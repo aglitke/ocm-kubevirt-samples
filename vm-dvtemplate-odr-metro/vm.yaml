@@ -57,6 +57,8 @@ spec:
   dataVolumeTemplates:
   - metadata:
       name: sample-vm-pvc
+      labels:
+        appname: vm-dvtemplate-odr-metro
     spec:
       storage:
         storageClassName: ocs-external-storagecluster-ceph-rbd
