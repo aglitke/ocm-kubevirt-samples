@@ -57,6 +57,8 @@ spec:
   dataVolumeTemplates:
   - metadata:
       name: sample-vm-pvc
+      annotations:
+        cdi.kubevirt.io/storage.checkStaticVolume: "true"
       labels:
         appname: vm-dvtemplate-odr-metro
     spec:
