@@ -53,7 +53,12 @@ spec:
         name: rootdisk
       - name: cloudinit
         cloudInitNoCloud:
-          userData: "#cloud-config"
+          userData: |
+            #cloud-config
+            user: fedora
+            password: drftw!
+            chpasswd:
+              expire: false
   dataVolumeTemplates:
   - metadata:
       name: sample-vm-pvc
