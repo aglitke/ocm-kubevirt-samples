@@ -55,7 +55,7 @@ spec:
         cloudInitNoCloud:
           userData: |
             #cloud-config
-            user: fedora
+            user: cirros
             password: drftw!
             chpasswd:
               expire: false
