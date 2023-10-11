@@ -1,0 +1,4 @@
+---
+resources:
+- vm.yaml
+- dv.yaml

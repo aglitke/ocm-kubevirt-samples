@@ -1,0 +1,15 @@
+apiVersion: cdi.kubevirt.io/v1beta1
+kind: DataVolume
+metadata:
+  name: sample-vm-pvc
+  labels:
+    appname: vm-standalone-dv-odr-regional
+spec:
+  storage:
+    storageClassName: ocs-storagecluster-ceph-rbd
+    resources:
+      requests:
+        storage: 2Gi
+  source:
+    registry:
+      url: "docker://quay.io/alitke/cirros:latest"
