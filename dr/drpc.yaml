@@ -1,0 +1,17 @@
+---
+apiVersion: ramendr.openshift.io/v1alpha1
+kind: DRPlacementControl
+metadata:
+  name: kubevirt-drpc
+  labels:
+    app: kubevirt-sample
+spec:
+  preferredCluster: "dr1"
+  drPolicyRef:
+    name: dr-policy
+  placementRef:
+    kind: Placement
+    name: kubevirt-placement
+  pvcSelector:
+    matchLabels:
+      appname: vm-standalone-dv-odr-regional
