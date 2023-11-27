@@ -30,7 +30,21 @@ Use ACM console to delete the application.
 ## Using in Kubernetes
 
 In Kubernetes you need to deploy the VM and DR resources using the
-command line tools or API.
+command line tools or API. In this example we use the ramen testing
+environment.
+
+### Setting up the testing environment
+
+*Ramen* test environment creates 3 *minikube* clusters (hub, dr1, dr2)
+on your laptop, including *OCM*, *Rook*, *Kubevirt*, *CDI*, and many
+other components required by *Ramen*.
+
+See the [User quick start guide](https://github.com/RamenDR/ramen/blob/main/docs/user-quick-start.md)
+for complete instructions.
+
+> [!IMPORTANT]
+> When starting the environment, use the `regional-dr-kubvirt.yaml`
+> configuration.
 
 ### Adding your SSH key
 
