@@ -59,14 +59,6 @@ the included SSH public key with your own public key.
 1. If you are not using the `main` branch update
    `subscription/subscription.yaml` to point to the right branch.
 
-### Deploying the channel
-
-Deploy the channel to introduce this repo to *OCM*:
-
-```sh
-kubectl apply -k channel --context hub
-```
-
 ### Deploying the VM subscription
 
 To start the VM deploy the subscription:
@@ -421,12 +413,4 @@ Delete the subscription to stop and delete the VM:
 
 ```sh
 kubectl delete -k subscription --context hub
-```
-
-### Delete the channel
-
-When done you can delete the channel:
-
-```sh
-kubectl delete -k channel --context hub
 ```

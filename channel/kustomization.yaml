@@ -1,5 +1,0 @@
----
-resources:
-- channel.yaml
-- namespace.yaml
-namespace: kubevirt-samples
