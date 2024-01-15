@@ -7,7 +7,7 @@ metadata:
     apps.open-cluster-management.io/github-path: vm-standalone-pvc-k8s
   name: kubevirt-sub
 spec:
-    channel: kubevirt-samples/kubevirt-gitops
+    channel: kubevirt-sample/ocm-kubevirt-samples
     placement:
       placementRef:
         kind: Placement
